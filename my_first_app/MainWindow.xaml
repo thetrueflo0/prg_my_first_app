@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Label Content="Login Formular" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Width="140" FontSize="18" FontWeight="Bold"/>
+        <TextBox Name="EmailTextBox" HorizontalAlignment="Center" Margin="0,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" 
+             Text="Email" Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+        <PasswordBox Name="PasswordBox" HorizontalAlignment="Center" Margin="0,167,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Content="Login" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Width="72" Click="LoginButton_Click"/>
     </Grid>
 </Window>
