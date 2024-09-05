@@ -21,7 +21,11 @@ namespace my_first_app
         {
             InitializeComponent();
         }
-
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Close the current window or application
+            this.Close();
+        }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string email = EmailTextBox.Text;
@@ -52,6 +56,15 @@ namespace my_first_app
             if (email == "fca124419@stud.gibb.ch" && password == "sml12345")
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // Open the new Dashboard window
+                DashboardWindow dashboard = new DashboardWindow();
+                dashboard.Show();   // Show the new window
+
+                // Optionally, close or hide the current login window
+                this.Close();  // This will close the login window
+                // Or, if you prefer to hide it instead:
+                // this.Hide();
             }
             else
             {
